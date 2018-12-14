@@ -1,37 +1,27 @@
+window.onload = function () {
+
+        let x = window.innerHeight;
+        let y = window.innerWidth;
+
+        document.getElementById("myBtn").style.top = x/2 + "px";
+        document.getElementById("myBtn").style.left = y/2 + "px";
+
+        
+}
 let count = 0;
+function myfunction()
+{
+        let x = window.innerHeight;
+        let y = window.innerWidth;
 
-function myfunction(btn){
-    count++;
-
-    document.getElementById("button").innerHTML = "Count is " + count;
-    // document.getElementById("button").addEventListener('click', f)
-
-    let b = document.createElement("BUTTON");
-
-    b.onclick = function()
-    {
-        // let b = document.getElementById("button");
-        b.style.right =Math.floor((Math.random() * 230) + 1) + "px";
-        b.style.top =Math.floor((Math.random() * 200) + 1) + "px";
-        b.style.backgroundColor ='blue';
-        console.log(b);
-
-        myfunction(b);
-    };
-
-    document.body.appendChild(b);
-
-
+        let height = Math.floor(Math.random()* x-100) + "px";
+        let width = Math.floor(Math.random()* y-100) + "px";
+        document.getElementById("myBtn").style.top = height;
+        document.getElementById("myBtn").style.left = width;
+        count +=10;
+        document.getElementById("para").innerHTML = "Your Score is " + count ;
 }
 
-// function f() {
-//     let b = document.createElement("button");
-//     document.body.appendChild(b);
-//
+// function calculateScore(){
+    
 // }
-
-
-
-
-
-
